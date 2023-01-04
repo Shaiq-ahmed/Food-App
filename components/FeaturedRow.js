@@ -65,7 +65,7 @@ const FeaturedRow = ({title, description , featuredCategory}) => {
          genre="Chinese"
          address="123 Main St"
          short_description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-         dishes={[]}
+         dishes={['Soup',"Crap","Lobster","Pasta", "Spaghetti","Chowmein", "Pizza"]}
          long= {20}
          lat={30}
          />
