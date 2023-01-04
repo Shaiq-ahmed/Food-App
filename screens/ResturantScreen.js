@@ -3,6 +3,7 @@ import React, { useLayoutEffect } from 'react'
 import { useNavigation, useRoute } from '@react-navigation/native'
 import { ArrowLeftCircleIcon, ArrowLeftIcon, ChevronLeftIcon, ChevronRightIcon, MapPinIcon, QuestionMarkCircleIcon} from 'react-native-heroicons/outline'
 import { StarIcon } from 'react-native-heroicons/solid'
+import DishRow from '../components/DishRow'
 
 const ResturantScreen = () => {
   const navigation = useNavigation()
@@ -58,10 +59,16 @@ const ResturantScreen = () => {
          <Text className="text-lg font-bold pl-5">Menu</Text>
          {/*Dishes */}
          {dishes.map((dish)=>{
-           return (
-             <TouchableOpacity key={dish.id} className="flex-row items-center space-x-1">
-             </TouchableOpacity>
-           )
+          return
+           <DishRow 
+            key={dish._id}
+            id={dish._id}
+            name={dish.name}
+            imgUrl={dish.imgUrl}
+            description={dish.short_description}
+            price={dish.price}
+            image={dish.image}
+           />
          })}
         </View>
   
